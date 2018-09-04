@@ -66,6 +66,14 @@ public class Array<E> {
         return data[index];
     }
 
+    public E getElementFirst() {
+        return data[0];
+    }
+
+    public E getElementLast() {
+        return data[size - 1];
+    }
+
     public void updateElementByIndex(int index, E element) {
         if (index < 0 || index >= size) {
             throw new IllegalArgumentException("Index is out of size");
