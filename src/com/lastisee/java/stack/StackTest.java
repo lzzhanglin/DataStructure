@@ -18,8 +18,33 @@ public class StackTest {
         System.out.println(stack);
         int result = stack.peek();
         System.out.println("top is: " + result);
-        String str = "{[[)]}";
-//        StackImpl<String> stringStack = new StackImpl<>();
+        String str = "{[[]]}";
+        Stack<Character> stack1 = new Stack<>();
+        for(int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (c == '{' || c == '[' || c == '(') {
+                stack1.push(c);
+            } else {
+                if (stack1.isEmpty()) {
+                    System.out.println("close error");
+                }
+                char topChar = stack1.pop();
+                if (topChar == '{' && c != '}') {
+                    System.out.println("close error");
+                }
+                if (topChar == '[' && c != ']') {
+                    System.out.println("close error");
+                }
+                if (topChar == '(' && c != ')') {
+                    System.out.println("close error");
+                }
+            }
+
+        }
+        if (stack1.isEmpty()) {
+            System.out.println("close ok");
+        }
+
         Stack<String> stringStack = new Stack<>();
         String[] stringArr = new String[10];
         if (str.length() % 2 == 1) {
