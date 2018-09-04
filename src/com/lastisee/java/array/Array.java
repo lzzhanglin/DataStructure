@@ -108,7 +108,7 @@ public class Array<E> {
         }
         size--;
         data[size] = null;
-        if (size == data.length / 2) {
+        if (size == data.length / 4 && data.length/2 != 0) {
             resize(data.length / 2);
         }
         return delete;
@@ -143,8 +143,8 @@ public class Array<E> {
         return result.toString();
     }
 
-    private void resize(Long size) {
-        E[] newData = (E)new Object[size];
+    private void resize(int size) {
+        E[] newData = (E[])new Object[size];
         for (int i = 0; i < size; i++) {
             newData[i] = data[i];
         }
