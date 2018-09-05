@@ -45,7 +45,7 @@ public class Array<E> {
     }
 
     public void addElementByIndex(int index, E element) {
-        if (size == data.length  || index < 0 || index > size) {
+        if ( index < 0 || index > size) {
             throw new IllegalArgumentException("addElement failed!");
         }
         if (size == data.length) {
@@ -153,7 +153,7 @@ public class Array<E> {
 
     private void resize(int size) {
         E[] newData = (E[])new Object[size];
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size / 2; i++) {
             newData[i] = data[i];
         }
         data = newData;
