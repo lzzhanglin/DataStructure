@@ -18,9 +18,11 @@ public class Main {
         int opCount = 100000;
         QueueImpl<Integer> queue = new QueueImpl<>();
         LoopQueue<Integer> loopQueue = new LoopQueue<>();
+        LinkedListQueue<Integer> linkedListQueue = new LinkedListQueue<>();
         double time1 = testQueue(queue, opCount);
         double time2 = testQueue(loopQueue, opCount);
-        System.out.println("time1 is: " + time1 + " time2 is: " + time2);
+        double time3 = testQueue(linkedListQueue, opCount);
+        System.out.println("time1 is: " + time1 + " time2 is: " + time2 + " time3 is: " + time3);
 
 
     }

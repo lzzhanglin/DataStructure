@@ -1,4 +1,4 @@
-package com.lastisee.java.linkedlist;
+package com.lastisee.java.stack;
 
 
 import java.util.Objects;
