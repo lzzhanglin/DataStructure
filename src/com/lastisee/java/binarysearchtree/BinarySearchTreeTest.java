@@ -7,7 +7,11 @@ public class BinarySearchTreeTest {
         for (int num : nums) {
             tree.add(num);
         }
-        tree.preOrder();
-        System.out.println(tree);
+//        tree.preOrder();
+        tree.preOrderWithoutRecursive();
+        tree.inOrder();
+        System.out.println("****************");
+        tree.postOrder();
+//        System.out.println(tree);
     }
 }
